@@ -40,6 +40,7 @@ export default class PostgrestClient {
    */
   from<T = any>(table: string): PostgrestQueryBuilder<T> {
     const url = `${this.url}/${table}`
+    console.log('Fucking Error')
     return new PostgrestQueryBuilder<T>(url, { headers: this.headers, schema: this.schema })
   }
 
